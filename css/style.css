@@ -5,14 +5,30 @@
 
 }
 
+::-webkit-scrollbar {
+    margin-right: 20px;
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+
+
 :root{
     --out-bg-grey: #e1e1de;
     --out-bg-green: #00a884;
+    --user-bg-color: #e3e4e8;
+
     --topGreen-height: 125px;
     --app-height: 96vh;
     --top-profile-height: 60px;
 
-    --chat-height:90px;
+    --chat-height: 100%;
     --text-width: 54vw;
 }
 
@@ -57,6 +73,7 @@
 
 .topbar-profile{
     height: var(--top-profile-height);
+    background-color: var(--user-bg-color);
 }
 
 .content{
@@ -72,10 +89,6 @@
     
 }
 
-#chat{
-    height: var(--chat-height);
-    background-color: red;
-}
 
 .chat-container{
     overflow-y: auto;
@@ -87,6 +100,7 @@
 .writebar{
     width: 100%;
     height: var(--top-profile-height);
+    background-color: var(--user-bg-color);
 }
 
 .writebar>*{
@@ -103,4 +117,8 @@
 
 input{
     outline: none;
+}
+
+.message-content{
+    max-width: 75%;
 }

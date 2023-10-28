@@ -23,44 +23,44 @@
         <!-- actual content -->
         <div id="app" class="  d-flex flex-row">
             <div class="sidebar bg-secondary">
-                <div class="sidebar-top bg-dark d-flex flex-column">
-                    <div class="topbar-profile bg-debug">
+                <div class="sidebar-top  d-flex flex-column">
+                    <div class="topbar-profile">
 
                     </div>
 
+                    <div class="topbar-search d-flex flex-row align-items-center flex-grow-1"
+                        style="background-color: white;">
+                        <div class="  mx-2 d-flex flex-row align-items-center bg-light flex-grow-1">
+                            <i class="fa-solid fa-smile px-2"></i>
+                            <input type="text" class="flex-grow-1 border-0 bg-light py-1"
+                                placeholder="Scrivi un messaggio" @keydown.enter="detectSend()">
+                        </div>
+                        <i class="fa-solid fa-hacker-news mr-2"></i>
+                    </div>
 
                 </div>
 
             </div>
-            <div class="content bg-debug">
-                <div class="topbar-profile bg-dark"></div>
+            <div class="content">
+                <div class="topbar-profile "></div>
 
                 <!-- chat will be generated via js -->
 
 
                 <div class="bottom-content d-flex flex-column justify-content-end">
-                    <div class="chat-container">
-
-                        <div id="chat" class="chat-width ">
-                            <div class="d-flex justify-content-start">
-                                <div class="message-content">
-                                    a
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-end">
-                                <div class="card p-1 message-content bg-warning">
-                                    b
-                                </div>
-                            </div>
+                    <div class="chat-container py-3">
+                        <div id="chat" class="chat-width d-flex flex-column justify-content-end" v-html="totalMsg">
+                            <!-- generated via js -->
                         </div>
                     </div>
                     <!-- chatting bar -->
-                    <div class="writebar bg-success d-flex flex-row justify-content-between align-items-center px-3 "
+                    <div class="writebar d-flex flex-row justify-content-between align-items-center px-3 "
                         role="textbox ">
                         <div>+</div>
                         <div class="input-container  mx-3 d-flex flex-row align-items-center bg-light">
-                            <i class="fa-solid fa-smile px-2"></i>
-                            <input type="text" class="flex-grow-1 border-0 bg-light " placeholder="Scrivi un messaggio">
+                            <i class="fa-solid fa-smile px-2" @click="changePerson"></i>
+                            <input type="text" class="flex-grow-1 border-0 bg-light " placeholder="Scrivi un messaggio"
+                                @keydown.enter="detectSend()" v-model="messageToSend">
                         </div>
                         <div>m</div>
                     </div>
@@ -69,7 +69,8 @@
             </div>
         </div>
     </div>
-    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
