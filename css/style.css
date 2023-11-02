@@ -23,6 +23,7 @@
     --out-bg-grey: #e1e1de;
     --out-bg-green: #00a884;
     --user-bg-color: #e3e4e8;
+    --my-chat-color: #d9fdd3;
 
     --topGreen-height: 125px;
     --app-height: 96vh;
@@ -71,7 +72,7 @@
     height: calc(var(--topGreen-height) - (100vh - var(--app-height))/2 - 1px);
 }
 
-.topbar-profile{
+.topbar{
     height: var(--top-profile-height);
     background-color: var(--user-bg-color);
 }
@@ -80,6 +81,8 @@
     height: 100%;
     width: calc(100% - 23vw);
 }
+
+/*sidebar via js*/
 
 /*content handler */
 
@@ -99,7 +102,7 @@
 }
 .writebar{
     width: 100%;
-    height: var(--top-profile-height);
+    min-height: var(--top-profile-height);
     background-color: var(--user-bg-color);
 }
 
@@ -121,4 +124,41 @@ input{
 
 .message-content{
     max-width: 75%;
+}
+
+.bg-start{
+    background-color: aliceblue;
+    border: 0;
+}
+
+.bg-end{
+    background-color: var(--my-chat-color);
+    border: 0;
+}
+
+.topbar-profile{
+    max-width: calc( var(--top-profile-height) - 15px);
+    background-size: cover;
+    overflow: hidden;
+    
+    border-radius: 50%;
+}
+
+.sidebar-bottom{
+    overflow-y: auto;
+}
+.row-fixer{
+    width: 100%;
+    margin-left: 0px;
+}
+
+
+
+
+.contact{
+    /* height: auto;
+     
+    */
+    height: 100px;
+    background-color: green;
 }

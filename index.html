@@ -22,27 +22,56 @@
 
         <!-- actual content -->
         <div id="app" class="  d-flex flex-row">
-            <div class="sidebar bg-secondary">
+            <div class="sidebar bg-secondary d-flex flex-column">
                 <div class="sidebar-top  d-flex flex-column">
-                    <div class="topbar-profile">
+                    <div class="topbar d-flex flex-row p-2">
+                        <div class="topbar-profile ">
+                            <img class="profile-icon"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdTzIX93IJEXv8mVU57sax4AweuNaegTfslAlh4bPiKA&s"
+                                alt="profile">
+                        </div>
 
                     </div>
-
                     <div class="topbar-search d-flex flex-row align-items-center flex-grow-1"
                         style="background-color: white;">
                         <div class="  mx-2 d-flex flex-row align-items-center bg-light flex-grow-1">
-                            <i class="fa-solid fa-smile px-2"></i>
+                            <i class="fa-solid fa-search px-2"></i>
                             <input type="text" class="flex-grow-1 border-0 bg-light py-1"
                                 placeholder="Scrivi un messaggio" @keydown.enter="detectSend()">
                         </div>
-                        <i class="fa-solid fa-hacker-news mr-2"></i>
+                        <svg viewBox="0 0 24 24" height="20" width="20" preserveAspectRatio="xMidYMid meet" class="pr-1"
+                            version="1.1" x="0px" y="0px" enable-background="new 0 0 24 24">
+                            <path fill="currentColor"
+                                d="M10,18.1h4v-2h-4V18.1z M3,6.1v2h18v-2H3z M6,13.1h12v-2H6V13.1z"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="sidebar-bottom bg-debug flex-grow-1">
+                    <div class="row row-fixer ">
+                        <div class="contact col-12">content</div>
+                        <div class="contact col-12">content</div>
+                        <div class="contact col-12">content</div>
+                        <div class="contact col-12">content</div>
+                        <div class="contact col-12">content</div>
+                        <div class="contact col-12">content</div>
+                        <div class="contact col-12">content</div>
+                        <div class="contact col-12">content</div>
+                        <div class="contact col-12">content</div>
+                        <div class="contact col-12">content</div>
+                        <div class="contact col-12">content</div>
+                        <div class="contact col-12">content</div>
+                        <div class="contact col-12">content</div>
+                        <div class="contact col-12">content</div>
+                        <div class="contact col-12">content</div>
+                        <div class="contact col-12">content</div>
+
                     </div>
 
                 </div>
-
             </div>
             <div class="content">
-                <div class="topbar-profile "></div>
+                <div class="topbar"></div>
 
                 <!-- chat will be generated via js -->
 
@@ -54,15 +83,17 @@
                         </div>
                     </div>
                     <!-- chatting bar -->
-                    <div class="writebar d-flex flex-row justify-content-between align-items-center px-3 "
+                    <div class="writebar d-flex flex-row justify-content-center align-items-center px-3 "
                         role="textbox ">
-                        <div>+</div>
+                        <div class="d-flex flex-row align-items-center"><i class="fa-solid fa-plus "
+                                style="font-size: 1.3em;"></i></div>
                         <div class="input-container  mx-3 d-flex flex-row align-items-center bg-light">
                             <i class="fa-solid fa-smile px-2" @click="changePerson"></i>
                             <input type="text" class="flex-grow-1 border-0 bg-light " placeholder="Scrivi un messaggio"
                                 @keydown.enter="detectSend()" v-model="messageToSend">
                         </div>
-                        <div>m</div>
+                        <div class="d-flex flex-row align-items-center"><i class="fa-solid fa-microphone"
+                                style="font-size: 1.3em;"></i></div>
                     </div>
                 </div>
 
